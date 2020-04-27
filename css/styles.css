@@ -1,0 +1,273 @@
+
+/* ******************************* BASE STYLES ****************************** */
+
+html {
+    background: url(../img/flock-of-birds.jpg);
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+	flex-direction: column; 
+	min-height: 100vh; 
+    font: normal 1em/1.5 'Cabin', sans-serif;
+    /* Shorthand: font-weight, font-size, line-height and font-family; */
+ }
+ 
+ main {
+     flex: 1;            /* sticky footer */
+ }
+
+.main-sec {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.p-name,
+.name {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.flex-items {
+    font-family: 'Bree Serif', serif;
+}
+
+.header-2 {
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+}
+
+/* pseudo-class */
+
+ul li:hover {
+    background-color: #000080;
+}
+
+ul li {
+    background-color: #6495ed;
+}
+
+.top-button:hover {
+    color: #191970;
+}
+
+/* ********************************* HEADER ********************************* */
+
+/* flex */
+.header,
+.skills,
+.main-footer,
+.footer-nav {
+    display: flex;
+}
+
+.main-header {
+    margin-top: 20px;
+}
+
+.p-name,
+.main-nav a {
+    text-align: center;
+    display: block;
+}
+
+ul li a {
+    color: #fdf5e6;
+}
+
+.main-nav a{
+    margin: 10px;
+    padding: 10px 0 10px 0;
+}
+
+.header {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    text-align: center;
+}
+
+.portfolio-p {
+    margin-right: 20px;
+}
+
+.intro {
+    margin-top: 20px;
+}
+
+/* ****************************** MAIN SECTION ****************************** */
+
+.sub-sec {
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 0.25rem 0 0.5rem 0;
+}
+
+.col-img {
+    border-radius: 8px;
+}
+
+.sec-header {
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+/* ***************************** SKILLS SECTION ***************************** */
+
+.skills{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: lightslategrey;
+}
+
+.section-p,
+.col {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ***************************** CONTACT SECTION **************************** */
+
+hr {
+    border: 1px solid #fffaf0;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+/* ********************************* FOOTER ********************************* */
+
+.footer-nav li {
+    display: none;          /* Hides navigation links on small screens */
+}
+
+.name {
+    margin-right: auto;
+}
+
+/* ********************** MEDIA QUERIES MEDIUM SCREENS ********************** */
+
+@media (min-width: 769px) {
+
+    /* base styles */
+
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    li.flex-items {
+        background: none;
+    }
+
+    .main-header,
+    .main-nav,
+    .row {
+        display: flex;
+    }
+
+    .main-sec {
+        padding: 0;
+    }
+
+    /* header */
+
+    .main-header {
+        flex-direction: column;   /* aligns header section center */
+        align-items: center;
+    }
+   
+    .header {
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    /* main section */
+
+    .main-nav a {                /* header navigation links */
+        padding-left: 30px;
+        margin: 0;
+    }
+
+    .col {
+        flex-basis: 50%;
+        padding: 20px 1em 0 1em;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .sub-sec,
+    .skills {
+        border-radius: 20px 10px;
+        box-shadow: inset 0 0 90px -6px grey;
+    }
+
+    /* pseudo-class */
+
+    ul li:hover {
+        background: none;
+    }
+
+    ul li a {
+        color: initial;
+    }
+
+    ul li a:hover {
+        color: #191970;
+    }
+    
+    /* footer section */
+ 
+    .top-button {
+        display: none;           /* Hides back-to-top link on large screens */
+    }
+
+    .footer-nav li {             /* footer navigation links */
+        display: inline-block;
+        padding-left: 30px;
+    }
+
+    .main-footer {
+        margin-bottom: 10px;
+    }
+    
+}
+
+/* *********************** MEDIA QUERIES LARGE SCREENS ********************** */
+
+@media (min-width: 1024px) {
+
+    /* base styles */
+    
+    .wrapper {
+        width: 80%;
+        max-width: 1080px;
+    }
+
+    .main-header {
+        flex-direction: row;
+    }
+
+    .p-name {
+        margin-right: auto;
+    }
+
+    /* main section */
+
+    .col {
+        flex: 33.333%;
+    }
+}
+
+
